@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import TextField from 'material-ui/TextField';
+
 
 export default class ToDoList extends Component {
   constructor(props){
@@ -10,16 +12,16 @@ export default class ToDoList extends Component {
     }
   }
 
-  changeUserInput(input){
+  changeUserInput(TextField){
 this.setState({
-  userInput: input
+  userInput: TextField
 })
   }
 
-addToList(input){
+addToList(TextField){
 let listArray = this.state.list;
 
-listArray.push(input);
+listArray.push(TextField);
 
 this.setState({
   list: listArray,
@@ -31,15 +33,21 @@ this.setState({
     return(
 
       <div className="to-do-list-main">
-        <input
+        <TextField
+              hintText="To do"
+              floatingLabelText="Add new task"
+
           onChange={ (e)=>this.changeUserInput(e.target.value)}
           value={this.state.userInput}
           type="text"
         />
-        <button onClick={ ()=> this.addToList(this.state.userInput) }>Press me</button>
+         <button
+          onClick={ ()=> this.addToList(this.state.userInput) }>
+          Add
+        </button>
 
         <ul>
-          {this.state.list.map( (val)=> <li>{val}</li>)}
+            {this.state.list.map( (val)=> <li><input type="checkbox" /> {val}</li>)}
         </ul>
       </div>
     );

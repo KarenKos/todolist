@@ -139,3 +139,22 @@ body {
   font-weight: 300;
   overflow-x: hidden;
 }
+li {
+  margin: 10px;
+}
+
+button {
+  margin: 15px;
+  background-color: #196056;
+  color: white;
+  border: 2px solid #196056;
+  transition: background-color 1.5s;
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  cursor: crosshair;
+  &:hover{
+    background-color: white;
+    color: #196056;
+  }
+}
