@@ -8,6 +8,11 @@ import Router from 'react-router-dom/Router';
 import createBrowserHistory from 'history/createBrowserHistory';
 import Switch from 'react-router-dom/Switch';
 
+//TODOLIST
+import Input2 from './components/Input2/Input2';
+import ToDoList from './components/Todolist/Todolist';
+//import Check from './components/Checkbox/Checkbox';
+
 // Material UI
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 
